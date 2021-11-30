@@ -3,7 +3,7 @@
 export const getData = async () => {
   try {
     const data = await fetch(
-      'https://api.jsonbin.io/b/618fca350ddbee6f8b0aaac3'
+      'https://api.jsonbin.io/b/61a4e87662ed886f9156c190'
     ).then((res) => res.json());
 
     let latestDatasWithDecimal = parseDecimals(data);
