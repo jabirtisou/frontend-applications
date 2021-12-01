@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import * as d3 from 'd3';
 
-const Chart = ({ data, selectedCountry }) => {
+const Chart = ({ data, selectedCountry, handleCountryChange }) => {
   const chartRef = useRef(null);
 
   useEffect(() => {
@@ -85,7 +85,25 @@ const Chart = ({ data, selectedCountry }) => {
       );
   }, [data, selectedCountry]);
 
-  return <div ref={chartRef}></div>;
+  return (
+    <div className='container'>
+      <h1>Big Mac Dollar Price Line Chart</h1>
+      <select
+        name='country'
+        id='country'
+        value={selectedCountry}
+        onChange={handleCountryChange}
+      >
+        <option value=''>Select Country</option>
+        {[...new Set(data.map((d) => d.name))].map((d) => (
+          <option key={d} value={d}>
+            {d}
+          </option>
+        ))}
+      </select>
+      <div ref={chartRef}></div>
+    </div>
+  );
 };
 
 export default Chart;

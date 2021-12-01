@@ -1,18 +1,46 @@
 //import fetch from "node-fetch"; // Importing node-fetch
 
-export const getData = async () => {
+export const getData = async (year) => {
   try {
     const data = await fetch(
-      'https://api.jsonbin.io/b/61a4e87662ed886f9156c190'
+      'https://api.jsonbin.io/b/618fca350ddbee6f8b0aaac3'
     ).then((res) => res.json());
+
+    data.map((d) => {
+      if (d.name === 'United States') {
+        d.name = 'USA';
+      }
+      return d;
+    });
 
     let latestDatasWithDecimal = parseDecimals(data);
 
-    return latestDatasWithDecimal;
+    const countryByYear = latestDatasWithDecimal.filter(
+      (d) => new Date(d.date).getFullYear() === year
+    );
+
+    const uniqueCountries = [
+      ...new Map(countryByYear.map((item) => [item.name, item])).values(),
+    ];
+
+    return uniqueCountries;
   } catch (error) {
     console.log(error);
   }
 };
+
+export const getLineData = async () => {
+  try {
+    const result = await fetch(
+      'https://api.jsonbin.io/b/61a4e87662ed886f9156c190'
+    ).then((res) => res.json());
+
+    return result;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
 export function parseDecimals(datas) {
   let finalData = [];
   for (let i = 0; i < datas.length; i++) {
@@ -23,29 +51,3 @@ export function parseDecimals(datas) {
   }
   return finalData;
 }
-
-// fetch("https://api.jsonbin.io/b/617fc7b54a82881d6c688213")
-//   .then(function (response) {
-//     return response.json();
-//   })
-//   .then(function (data) {
-//     let latestDatas = parseOnlyLatestDate(data);
-//     let latestDatasWithDecimal = parseDecimals(latestDatas);
-//     return latestDatasWithDecimal
-//   })
-//   .catch(function (err) {
-//     console.log(err);
-//   });
-// };;
-
-// export function parseOnlyLatestDate(datas) {
-//   let finalData = [];
-//   for (let i = 0; i < datas.length; i++) {
-//     let data = datas[i];
-//     let date = new Date(data.date); // Date() constructor
-//     if (date.getFullYear() === 2021) {
-//       finalData.push(data);
-//     }
-//   }
-//   return finalData;
-// }
