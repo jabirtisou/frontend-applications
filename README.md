@@ -104,7 +104,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Your Name - Jabir Tisoudali 
 
-Project Link: [https://github.com/jabirtisou/frontend-data](https://github.com/jabirtisou/frontend-data)
+Project Link: [https://github.com/jabirtisou/frontend-applications](https://github.com/jabirtisou/frontend-applications)
 
 
 
