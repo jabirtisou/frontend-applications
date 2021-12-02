@@ -12,7 +12,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/jabirtisou/CMDBlokTech">
-    <img src="https://www.ncrts.com/public/images/api-banner.jpg" alt="Logo" -->
+    <img src="https://f.hubspotusercontent30.net/hubfs/20029733/Imported_Blog_Media/banner-2.jpg" alt="Logo" -->
   </a>
 
 
@@ -121,8 +121,8 @@ Project Link: [https://github.com/jabirtisou/frontend-applications](https://gith
 [forks-url]: https://github.com/jabirtisou/frontend-data/network/members
 [stars-shield]: https://img.shields.io/github/stars/jabirtisou/Functional-Programming.svg?style=for-the-badge
 [stars-url]: https://github.com/jabirtisou/frontend-data/stargazers
-[issues-shield]: https://img.shields.io/github/issues/jabirtisou/Functional-Programming.svg?style=for-the-badge
-[issues-url]: https://github.com/jabirtisou/frontend-data/issues
+[issues-shield]: https://img.shields.io/github/issues/jabirtisou/frontend-applications.svg?style=for-the-badge
+[issues-url]: https://github.com/jabirtisou/frontend-applications/issues
 [license-shield]: https://img.shields.io/github/license/jabirtisou/CMDBlokTech.svg?style=for-the-badge
 [license-url]: https://github.com/jabirtisou/frontend-data/blob/main/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
