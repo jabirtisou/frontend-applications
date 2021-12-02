@@ -12,7 +12,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/jabirtisou/CMDBlokTech">
-    <img src="https://www.ncrts.com/public/images/api-banner.jpg" alt="Logo" -->
+    <img src="https://f.hubspotusercontent30.net/hubfs/20029733/Imported_Blog_Media/banner-2.jpg" alt="Logo" -->
   </a>
 
 
