@@ -38,10 +38,7 @@ rect:hover {
   outline: none;
 }
 
-.tooltip-value {
-  font-weight: bold;
-  font-size: 1rem;
-}
+
 
 .container {
   width: 100%;
