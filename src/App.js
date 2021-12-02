@@ -2,7 +2,7 @@ import './App.css';
 import { getData, getLineData } from './fetch';
 import { useEffect, useState } from 'react';
 import BarChart from './BarChart';
-import Chart from './Chart';
+import Chart from './LineChart';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './Home';
 import Header from './Header';

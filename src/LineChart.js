@@ -5,13 +5,16 @@ const Chart = ({ data, selectedCountry, handleCountryChange }) => {
   const chartRef = useRef(null);
 
   useEffect(() => {
+    //set width, height and margins
     const margin = { top: 30, right: 20, bottom: 30, left: 50 };
     const width = 1150 - margin.left - margin.right;
     const height = 500 - margin.top - margin.bottom;
     const dateFormat = d3.timeParse('%Y-%m-%d');
 
+    // Delete current charts
     d3.select(chartRef.current).selectAll('*').remove();
 
+    // append svg to the chart div and translate it
     const svg = d3
       .select(chartRef.current)
       .append('svg')
@@ -20,12 +23,14 @@ const Chart = ({ data, selectedCountry, handleCountryChange }) => {
       .append('g')
       .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
+    //function to define the x scale and map data to width of svg
     const x = d3
       .scaleTime()
       .domain(d3.extent(data, (d) => dateFormat(d.date)))
       .range([0, width])
       .nice();
 
+    // append x axis to svg
     svg
       .append('g')
       .attr('transform', `translate(0, ${height})`)
@@ -37,6 +42,7 @@ const Chart = ({ data, selectedCountry, handleCountryChange }) => {
         g.selectAll('text').attr('color', '#555555').attr('font-size', '12px')
       );
 
+    //function to define the y scale and map data to height of svg
     const y = d3
       .scaleLinear()
       .domain(
@@ -48,6 +54,7 @@ const Chart = ({ data, selectedCountry, handleCountryChange }) => {
       .range([height, 0])
       .nice();
 
+    // append y axis to svg
     svg
       .append('g')
       .call(d3.axisLeft(y))

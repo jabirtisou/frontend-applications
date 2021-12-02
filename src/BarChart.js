@@ -61,8 +61,6 @@ const BarChart = ({ data, year, years, handleChange }) => {
       .merge(rects)
       .transition()
       .duration(1000)
-      .attr('x', (d) => x(0))
-      .attr('y', (d) => y(d.name))
       .attr('width', (d) => x(d.dollar_price))
       .attr('height', y.bandwidth())
       .attr('fill', '#f7f7f7')

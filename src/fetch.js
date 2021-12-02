@@ -6,19 +6,13 @@ export const getData = async (year) => {
       'https://api.jsonbin.io/b/618fca350ddbee6f8b0aaac3'
     ).then((res) => res.json());
 
-    data.map((d) => {
-      if (d.name === 'United States') {
-        d.name = 'USA';
-      }
-      return d;
-    });
-
     let latestDatasWithDecimal = parseDecimals(data);
 
     const countryByYear = latestDatasWithDecimal.filter(
       (d) => new Date(d.date).getFullYear() === year
     );
 
+    // Delete double values
     const uniqueCountries = [
       ...new Map(countryByYear.map((item) => [item.name, item])).values(),
     ];
