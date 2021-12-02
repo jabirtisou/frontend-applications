@@ -80,11 +80,11 @@ Bij het starten van de server kan je het openen op je http://localhost:3000.
 Barchart
     <br />
 
-<img src="https://github.com/jabirtisou/frontend-data/blob/main/Wiki_images/Schermafbeelding%202021-11-17%20om%2023.10.32.png" width='50%' alt="Logo" /> 
-Wereldmap
+<img src="https://github.com/jabirtisou/frontend-applications/blob/main/Wiki_images/BarChart.png" width='50%' alt="Logo" /> 
+LineChart
     <br />
 
-<img src="https://github.com/jabirtisou/frontend-data/blob/main/Wiki_images/Schermafbeelding%202021-11-17%20om%2023.10.42.png" width='50%' alt="Logo" />
+<img src="https://github.com/jabirtisou/frontend-applications/blob/main/Wiki_images/LineChart.png" width='50%' alt="Logo" />
 
 
 
