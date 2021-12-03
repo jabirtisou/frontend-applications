@@ -48,7 +48,7 @@ const Chart = ({ data, selectedCountry, handleCountryChange }) => {
       .domain(
         d3.extent(
           data.filter((d) => d.name === selectedCountry),
-          (d) => +d.dollar_price
+          (d) => d.dollar_price
         )
       )
       .range([height, 0])
@@ -61,18 +61,7 @@ const Chart = ({ data, selectedCountry, handleCountryChange }) => {
       .call((g) => g.select('.domain').remove())
       .call((g) => g.selectAll('text').attr('color', '#555555'))
       .selectAll('.tick line')
-      .attr('stroke', '#777777')
-      .call((g) =>
-        g
-          .select('.tick:last-of-type text')
-          .clone()
-          .attr('x', 3)
-          .attr('y', -20)
-          .attr('text-anchor', 'start')
-          .attr('font-weight', 'bold')
-          .attr('color', '#999999')
-          .text('Dollar Price')
-      );
+      .attr('stroke', '#777777');
 
     svg
       .append('path')
@@ -88,7 +77,7 @@ const Chart = ({ data, selectedCountry, handleCountryChange }) => {
           .line()
           .curve(d3.curveMonotoneX)
           .x((d) => x(dateFormat(d.date)))
-          .y((d) => y(+d.dollar_price))
+          .y((d) => y(d.dollar_price))
       );
   }, [data, selectedCountry]);
 

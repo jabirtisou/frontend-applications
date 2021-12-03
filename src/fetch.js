@@ -28,8 +28,9 @@ export const getLineData = async () => {
     const result = await fetch(
       'https://api.jsonbin.io/b/61a4e87662ed886f9156c190'
     ).then((res) => res.json());
+    let latestDatasWithDecimal2 = parseDecimals(result);
 
-    return result;
+    return latestDatasWithDecimal2;
   } catch (error) {
     console.log(error);
   }
